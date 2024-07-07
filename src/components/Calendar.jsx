@@ -21,7 +21,7 @@ function Calendar() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await axios.get("http://localhost:3002/events");
+        const response = await axios.get("https://diaryapp-backend.onrender.com/events");
         setEvents(response.data);
         console.log("Fetched events:", response.data);
       } catch (error) {
@@ -54,7 +54,7 @@ function Calendar() {
 
       try {
         const response = await axios.post(
-          "http://localhost:3002/events",
+          "https://diaryapp-backend.onrender.com/events",
           newEvent
         );
 
